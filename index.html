@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- add required and recommended <meta> tags -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Shereef Younis">
@@ -20,13 +20,12 @@
   <meta name="twitter:description" content="Time to join Limitless Fitness for the ultimate gym experience.">
   <meta name="twitter:image" content="https://www.limitlessfitness.com/images/facility.jpg">
 
+  <title>Limitless Fitness - The Ultimate Gym for Fitness and Wellness</title>
 </head>
 <body>
 
-<!-- add a skip link that skips to the main content -->
- <a href="#main" class="skip-link">Skip to main content</a>
+ <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- add correct heading levels -->
   <header>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round" width="75" height="75" stroke-width="1.5">
       <path d="M2 12h1"></path>
@@ -66,7 +65,7 @@
   </nav>
 
 
-  <main>
+  <main id="main-content">
     <section>
       <h2>About Us</h2>
       <p>Welcome to Limitless Fitness, where fitness meets community. Our state-of-the-art facility is designed to inspire and support you at every stage of your journey. Whether you're a beginner or a seasoned athlete, our expert trainers and diverse classes provide the perfect environment to achieve your personal best.</p>
@@ -133,20 +132,45 @@
         <li>Annual Memberships: Commit to your fitness journey and enjoy exclusive perks.</li>
         <li>Family & Group Plans: Get fit together and save more.</li>
       </ul>
+
       <section id="membership-form">
         <h3>Join Limitless Fitness Today!</h3>
         <p>Fill out the form below to kickstart your fitness journey:</p>
-<!--add accessibility to the form-->
-        Full Name
-        Email Address
-        Phone Number
-        Membership Type
-          Select a Membership Option
-          Monthly Membership
-          Annual Membership
-          Family & Group Plans
-        Tell us about your fitness goals:
-        Submit
+
+        <form action="https://wp.zybooks.com/form-viewer.php" method="POST">
+
+          <label for="first-name">First Name<span class="required">*</span></label>
+          <input id="first-name" type="text" name="first-name" placeholder="Ryan" autocomplete="name" required>
+                
+          <label for="last-name">Last Name<span class="required">*</span></label>
+          <input id="last-name" type="text" name="last-name" placeholder="Wilson" autocomplete="name" required>
+          
+          <label for="email">Email<span class="required">*</span></label>
+          <input id="email" type="email" name="email" placeholder="example@domain.com" autocomplete="email" required>
+          
+          <label for="phone">Phone Number<span class="required">*</span></label>
+          <input id="phone" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" autocomplete="tel" required>
+          
+
+          <fieldset>
+            <legend>Select a Membership Option<span class="required">*</span></legend>
+                  
+            <input id="monthly-membership" type="radio" name="option" value="monthly-membership" required>
+            <label for="monthly-membership">Monthly Membership</label>
+                  
+            <input id="annual-membership" type="radio" name="option" value="annual-membership" required>
+            <label for="annual-membership">Annual Membership</label>
+                  
+            <input id="family-group-plans" type="radio" name="option" value="family-group-plans" required>
+            <label for="family-group-plans">Family & Group Plans</label>
+          </fieldset>
+         
+          <label for="goals">Tell us about your fitness goals:<span class="required">*</span></label>
+          <textarea id="goals" name="goals" placeholder="Enter your fitness goals here..." required></textarea>
+          
+          <input type="submit" name="submit" value="Submit">
+
+        </form>
       </section>
     </section>
   </main>
